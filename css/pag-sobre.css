@@ -1,9 +1,470 @@
 @import url('navbar.css');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght=200..800&family=Inter:wght=300;400;600;700&display=swap');
+
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS E FUNDO
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     background: var(--cor-bg);
     color: var(--cor-branco);
     font-size: 16px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -40px;
+    background: url("../assets/bg-espaco.webp") center center / cover no-repeat;
+    z-index: -1;
+    opacity: 0.45;
+    filter: brightness(0.7);
+    --x: var(--bg-parallax-x, 0px);
+    --y: var(--bg-parallax-y, 0px);
+    transform: scale(1.1) translate3d(var(--x), var(--y), 0);
+    will-change: transform;
+}
+
+main {
+    padding-top: 100px;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO SOBRE
+   ========================================================================== */
+
+.sobre-hero {
+    position: relative;
+    padding: 120px 40px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 60vh;
     overflow: hidden;
+}
+
+.sobre-hero .hero-efeito {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 106, 0, 0.15) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-quem-somos {
+    display: inline-block;
+    color: var(--laranja-primario);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.sobre-hero-titulo {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 64px;
+    line-height: 1.15;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cor-branco);
+    margin-bottom: 24px;
+    text-shadow: 0 0 30px rgba(255, 106, 0, 0.25);
+}
+
+.text-amazonia {
+    color: var(--laranja-primario);
+}
+
+.sobre-hero-description {
+    font-size: 18px;
+    color: var(--cor-cinza);
+    line-height: 1.6;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SEÇÃO MISSÃO E ORIGEM
+   ========================================================================== */
+
+.sobre-missao {
+    padding: 120px 40px;
+    position: relative;
+    background: linear-gradient(180deg, transparent, rgba(15, 15, 20, 0.6), transparent);
+}
+
+.container-missao {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.missao-text {
+    flex: 1;
+    animation: fadeRight 1s ease forwards;
+}
+
+.secao-title {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 38px;
+    color: var(--cor-branco);
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.secao-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 3px;
+    background: var(--laranja-primario);
+    transition: width 0.4s ease;
+    border-radius: 999px;
+}
+
+.secao-title:hover::before {
+    width: 100%;
+}
+
+.text-center.secao-title {
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center.secao-title::before {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-fixo, .text-block {
+    font-size: 16px;
+    color: var(--cor-cinza);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.fiap-width {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 25px;
+    border-radius: 16px;
+    background: rgba(255, 106, 0, 0.05);
+    border: 1px solid rgba(255, 106, 0, 0.2);
+    box-shadow: 0 0 25px rgba(255, 106, 0, 0.05), inset 0 0 15px rgba(255, 106, 0, 0.02);
+    max-width: 450px;
+}
+
+.width-icon {
+    font-size: 32px;
+    color: var(--laranja-primario);
+    text-shadow: 0 0 15px rgba(255, 106, 0, 0.4);
+}
+
+.text-h4 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 18px;
+    color: var(--cor-branco);
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+}
+
+.text-fiap {
+    font-size: 14px;
+    color: var(--cor-cinza);
+    margin: 0;
+}
+
+.missao-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeLeft 1s ease forwards;
+}
+
+.image-media {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 106, 0, 0.15);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s ease, border-color 0.5s ease;
+}
+
+.image-media:hover {
+    transform: translateY(-5px) scale(1.02);
+    border-color: rgba(255, 106, 0, 0.35);
+    box-shadow: 0 0 60px rgba(255, 106, 0, 0.15);
+}
+
+.visual-img {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    object-fit: cover;
+    filter: brightness(0.85);
+}
+
+.image-media .hero-efeito {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, transparent 40%, rgba(255, 106, 0, 0.15) 100%);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   SEÇÃO VALORES & PILARES
+   ========================================================================== */
+
+.sobre-valores {
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.secao-subtitle {
+    font-size: 16px;
+    color: var(--cor-cinza);
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.valores-pilares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.valor-card {
+    padding: 40px 30px;
+    border-radius: 20px;
+    background: rgba(17, 17, 22, 0.55);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 106, 0, 0.08);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 106, 0, 0.25);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 106, 0, 0.12);
+    background: rgba(22, 22, 28, 0.65);
+}
+
+.valor-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--laranja-primario), transparent);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.valor-card:hover::before {
+    transform: scaleX(1);
+}
+
+.valor-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 106, 0, 0.08), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.valor-card:hover::after {
+    opacity: 1;
+}
+
+.valor-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    background: rgba(255, 106, 0, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: var(--laranja-primario);
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px rgba(255, 106, 0, 0.1);
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.4s ease;
+}
+
+.valor-card:hover .valor-icon {
+    transform: scale(1.1) rotate(5deg);
+    background: rgba(255, 106, 0, 0.16);
+    box-shadow: 0 0 25px rgba(255, 106, 0, 0.25);
+}
+
+.valor-h3 {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--cor-branco);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.text-valor {
+    font-size: 14px;
+    color: var(--cor-cinza);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+
+.footer {
+        width: 100%;
+        padding: 24px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--laranja-primario);
+        margin-top: 80px;
+        position: relative;
+        z-index: 20;
+    }
+
+    .text-footer {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 400;
+        color: var(--cor-branco);
+        text-align: center;
+    }
+
+/* ==========================================================================
+   ANIMAÇÕES
+   ========================================================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeRight {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeft {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+    .sobre-hero-titulo {
+        font-size: 50px;
+    }
+    .container-missao {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .missao-text, .missao-visual {
+        width: 100%;
+    }
+    .visual-img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 80px;
+    }
+    .sobre-hero {
+        padding: 80px 20px 40px;
+    }
+    .sobre-hero-titulo {
+        font-size: 36px;
+    }
+    .sobre-missao, .sobre-valores {
+        padding: 60px 20px;
+    }
+    .secao-title {
+        font-size: 28px;
+    }
+    .fiap-width {
+        max-width: 100%;
+    }
+    .valores-pilares {
+        grid-template-columns: 1fr;
+    }
 }

@@ -1,33 +1,189 @@
 <!doctype html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre / Sentra</title>
-
+    <!-- link css Pagina Sobre -->
     <link rel="stylesheet" href="../css/pag-sobre.css" />
-</head>
+    
+    <!-- Arquivo JavaScript -->
+    <script src="../js/pag-sobre.js" defer></script>
 
-<body>
+     <!-- Biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+  
+    <!-- ==========================================================================
+    NAVBAR
+    ========================================================================== -->
+    
+  <body>
     <header class="navbar">
-        <div class="logo">
-            <img src="../assets/logotipo-sentra.webp" alt="Logotipo Sentra" class="logo">
-        </div>
+      <div class="logo">
+        <img src="../assets/logotipo-sentra.webp" alt="Logotipo Sentra" class="logo"/>
+      </div>
 
-        <nav>
-            <a href="../index.html" class="nav-link">Página Inicial</a>
-            <a href="./pag-sobre.html" class="nav-link text-highlight">Sobre</a>
-            <a href="./pag-faq.html" class="nav-link">FAQ</a>
-            <a href="./pag-contato.html" class="nav-link">Contato</a>
-            <a href="./pag-solucao.html" class="nav-link">Solução</a>
-            <a href="./pag-equipe.html" class="nav-link">Equipe</a>
-        </nav>
+      <nav aria-label="Navegação principal">
+        <a href="../index.html" class="nav-link">Página Inicial</a>
+        <a href="./pag-sobre.html" class="nav-link text-highlight">Sobre</a>
+        <a href="./pag-faq.html" class="nav-link">FAQ</a>
+        <a href="./pag-contato.html" class="nav-link">Contato</a>
+        <a href="./pag-solucao.html" class="nav-link">Solução</a>
+        <a href="./pag-equipe.html" class="nav-link">Equipe</a>
+      </nav>
 
-        <a href="./pag-demonstracao.html" class="btn-nav">Demonstração</a>
+      <a href="./pag-demonstracao.html" class="btn-nav">Demonstração</a>
     </header>
-    <main>
-    </main>
-</body>
 
+    <!-- ==========================================================================
+        SEÇÃO SOBRE - MISSÃO, ORIGEM E PILARES DE AÇÃO
+    ========================================================================== -->
+    <main>
+      <section class="sobre-hero">
+        <div class="hero-efeito"></div>
+        <div class="hero-content">
+          <span class="hero-quem-somos">QUEM SOMOS</span>
+          <h1 class="sobre-hero-titulo">
+            Conectando o Espaço à Proteção da
+            <span class="text-amazonia">Amazônia</span>
+          </h1>
+          <p class="sobre-hero-description">
+            O SENTRA nasceu da união entre tecnologia aeroespacial de ponta e
+            inteligência artificial para revolucionar a prevenção, o
+            monitoramento e o combate a incêndios florestais na floresta
+            amazônica.
+          </p>
+        </div>
+      </section>
+
+      <section class="sobre-missao">
+        <div class="container-missao">
+          <div class="missao-text">
+            <h2 class="secao-title">Nossa Missão & Origem</h2>
+            <p class="text-fixo">
+              Desenvolvido como projeto acadêmico para a
+              <strong>Global Solution 2026 da FIAP</strong> sob o tema
+              <strong>Space Connect</strong>, o SENTRA tem como foco enfrentar
+              um dos maiores desafios ecológicos do planeta: as queimadas e
+              incêndios florestais descontrolados na Amazônia.
+            </p>
+            <p class="text-block">
+              Acreditamos que o tempo é o fator mais precioso no combate ao
+              fogo. Tradicionalmente, a identificação de focos leva horas ou até
+              dias. Com o SENTRA, trazemos inteligência orbital capaz de
+              rastrear anomalias térmicas e gerar relatórios completos,
+              acionáveis e atualizados a cada 3 horas.
+            </p>
+
+            <div class="fiap-width">
+              <i class="fa-solid fa-graduation-cap width-icon"aria-hidden="true"></i>
+              <div class="width-text">
+                <h4 class="text-h4">Global Solution 2026</h4>
+                <p class="text-fiap">FIAP — Space Connect Project</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="missao-visual">
+            <div class="image-media">
+              <img src="../assets/bg-solution.webp" alt="Planeta Terra em órbita" class="visual-img"/>
+              <div class="hero-efeito"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+        VALORES E PILARES DE AÇÃO
+    ==========================================================================   -->
+      <section class="sobre-valores">
+        <h2 class="secao-title text-center">Nossos Pilares de Ação</h2>
+        <p class="secao-subtitle text-center">
+          Os fundamentos tecnológicos e ecológicos que norteiam a plataforma
+          SENTRA.
+        </p>
+        <!-- Pilar 1 -->
+        <div class="valores-pilares">
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fa-solid fa-satellite-dish" aria-hidden="true"></i>
+            </div>
+            <h3 class="valor-h3">Inteligência Orbital</h3>
+            <p class="text-valor">
+              Captura e processamento constante de dados de satélites climáticos
+              para mapear focos de calor com cobertura total da floresta.
+            </p>
+          </div>
+          <!-- Pilar 2 -->
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fa-solid fa-fire-extinguisher" aria-hidden="true"></i>
+            </div>
+            <h3 class="valor-h3">Ação Preventiva</h3>
+            <p class="text-valor">
+              Otimizar a resposta e o planejamento tático de equipes de
+              brigadistas através de alertas rápidos e precisos.
+            </p>
+          </div>
+          <!-- Pilar 3 -->
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+            </div>
+            <h3 class="valor-h3">Relatórios de Impacto</h3>
+            <p class="text-valor">
+              Consolidação automática de dados meteorológicos, umidade do solo e
+              área afetada, gerando PDFs táticos inteligíveis.
+            </p>
+          </div>
+          <!-- Pilar 4 -->
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+            </div>
+            <h3 class="valor-h3">Engajamento Coletivo</h3>
+            <p class="text-valor">
+              Integrar governos, agronegócio consciente, ONGs e comunidades
+              tradicionais na preservação da maior floresta tropical do mundo.
+            </p>
+          </div>
+          <!-- Pilar 5 -->
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i>
+            </div>
+            <h3 class="valor-h3">Monitoramento Contínuo</h3>
+            <p class="text-valor">
+              Atualização constante das informações sobre a situação das áreas
+              afetadas, garantindo uma resposta rápida e eficaz.
+            </p>
+          </div>
+
+          <!-- Pilar 6 -->
+          <div class="valor-card">
+            <div class="valor-icon">
+              <i class="fa-solid fa-leaf" aria-hidden="true"></i>
+            </div>
+            <h3 class="valor-h3">Preservação Ambiental</h3>
+            <p class="text-valor">
+              Utilizar tecnologia e inovação para reduzir os impactos das
+              queimadas, proteger a biodiversidade e contribuir para a
+              conservação da Amazônia.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+    FOOTER 
+    ========================================================================== -->
+
+    <footer class="footer">
+      <p class="text-footer">
+        © 2026 SENTRA. Todos os direitos reservados. Projeto FIAP Global
+        Solution.
+      </p>
+    </footer>
+  </body>
 </html>

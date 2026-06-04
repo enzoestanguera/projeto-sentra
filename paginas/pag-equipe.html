@@ -1,32 +1,212 @@
 <!doctype html>
 <html lang="pt-br">
-
-<head>
+  <head>
+     <!-- Configurações básicas da página -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título exibido na aba do navegador -->
     <title>Equipe / Sentra</title>
 
+    <!-- Arquivo CSS da página de equipe -->
     <link rel="stylesheet" href="../css/pag-equipe.css" />
-</head>
 
-<body>
+     <!-- Biblioteca de ícones Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+  </head>
+
+      <!--=========================
+         NAVBAR / MENU PRINCIPAL
+    ========================== -->
+  <body>
     <header class="navbar">
-        <div class="logo">
-            <img src="../assets/logotipo-sentra.webp" alt="Logotipo Sentra" class="logo">
-        </div>
-        <nav>
-            <a href="../index.html" class="nav-link">Página Inicial</a>
-            <a href="./pag-sobre.html" class="nav-link">Sobre</a>
-            <a href="./pag-faq.html" class="nav-link">FAQ</a>
-            <a href="./pag-contato.html" class="nav-link">Contato</a>
-            <a href="./pag-solucao.html" class="nav-link">Solução</a>
-            <a href="./pag-equipe.html" class="nav-link text-highlight">Equipe</a>
-        </nav>
+        <!-- Logo da plataforma -->
+      <div class="logo">
+        <img src="../assets/logotipo-sentra.webp"alt="Logotipo Sentra"class="logo"/>
+      </div>
 
-        <a href="./pag-demonstracao.html" class="btn-nav">Demonstração</a>
+       <!-- Links de navegação -->
+      <nav aria-label="Navegação principal">
+        <a href="../index.html" class="nav-link">Página Inicial</a>
+        <a href="./pag-sobre.html" class="nav-link">Sobre</a>
+        <a href="./pag-faq.html" class="nav-link">FAQ</a>
+        <a href="./pag-contato.html" class="nav-link">Contato</a>
+        <a href="./pag-solucao.html" class="nav-link">Solução</a>
+        <a href="./pag-equipe.html" class="nav-link text-highlight">Equipe</a>
+      </nav>
+
+      <!-- Botão de acesso à demonstração -->
+      <a href="./pag-demonstracao.html" class="btn-nav">Demonstração</a>
     </header>
-    <main>
-    </main>
-</body>
 
+     <!-- =========================
+           HERO SECTION
+      ========================== -->
+    <main>
+      <section class="equipe-hero">
+
+         <!-- Efeito visual de fundo -->
+        <div class="hero-efeito"></div>
+
+         <!-- Conteúdo principal da hero -->
+        <div class="hero-content">
+          <span class="hero-subtitulo">DESENVOLVEDORES</span>
+          <h1 class="equipe-titulo">
+            Quem Faz o <span class="text-sentra">Sentra</span> Acontecer
+          </h1>
+          <p class="equipe-descricao">
+            Conheça a equipe por trás da plataforma inteligente de monitoramento
+            orbital e combate a incêndios florestais na Amazônia.
+          </p>
+        </div>
+      </section>
+
+       <!-- =========================
+           CARDS DOS MEMBROS
+      ========================== -->
+      <section class="equipe-membros">
+
+        <!-- Container que agrupa todos os cards -->
+        <div class="membros-container">
+
+        <!-- Card do integrante -->
+          <div class="membro-card">
+
+            <!-- Efeito visual do card -->
+            <div class="membro-efeito"></div>
+
+             <!-- Foto do integrante -->
+            <div class="membro-avatar-wrapper">
+              <img
+                src="https://github.com/enzoestanguera.png"
+                alt="Enzo Estanguera"
+                class="membro-avatar"/>
+            </div>
+
+            <!-- Informações do integrante -->
+            <div class="membro-info">
+              <h3 class="membro-nome">Enzo Estanguera</h3>
+              <span class="membro-rm">RM 568937</span>
+            </div>
+
+             <!-- Redes sociais -->
+            <div class="membro-social">
+
+                 <!-- GitHub -->
+              <a class="btn-social" href="https://github.com/enzoestanguera"target="_blank"rel="noopener noreferrer"aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+               <!-- LinkedIn -->
+              <a class="btn-social" href="https://www.linkedin.com/in/enzo-estanguera/"target="_blank"rel="noopener noreferrer"aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Integrante Ana Paula Magalhães -->
+          <div class="membro-card">
+            <div class="membro-efeito"></div>
+            <!-- Foto do integrante -->
+            <div class="membro-avatar-wrapper">
+              <img src="https://github.com/anapmagalhaess.png" alt="Ana Paula Magalhães"class="membro-avatar"/>
+            </div>
+            <!-- Informações do integrante -->
+            <div class="membro-info">
+              <h3 class="membro-nome">Ana Paula Magalhães</h3>
+              <span class="membro-rm">RM 560871</span>
+            </div>
+            <div class="membro-social">
+                <!-- GitHub -->
+              <a class="btn-social" href="https://github.com/anapmagalhaess"target="_blank"rel="noopener noreferrer"aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+               <!-- LinkedIn -->
+              <a class="btn-social"href="https://www.linkedin.com/in/anaclmagalhaes/"target="_blank" rel="noopener noreferrer"aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Integrante Larissa Koprowski -->
+          <div class="membro-card">
+            <div class="membro-efeito"></div>
+            <!-- Foto do integrante -->
+            <div class="membro-avatar-wrapper">
+              <img src="https://github.com/lkoprowskif.png" alt="Larissa Koprowski"class="membro-avatar"/>
+            </div>
+            <!-- Informações do integrante -->
+            <div class="membro-info">
+              <h3 class="membro-nome">Larissa Koprowski</h3>
+              <span class="membro-rm">RM 572983</span>
+            </div>
+            <div class="membro-social">
+                <!-- GitHub -->
+              <a class="btn-social"href="https://github.com/lkoprowskif"target="_blank"rel="noopener noreferrer"aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+              <!-- LinkedIn -->
+              <a class="btn-social" href="https://www.linkedin.com/in/larissa-koprowski-111b3a357/"target="_blank"rel="noopener noreferrer"aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+          <!-- Integrante Luis Felipe Fernandes Esteves  -->
+          <div class="membro-card">
+            <div class="membro-efeito"></div>
+            <div class="membro-avatar-wrapper">
+                <!-- Foto do integrante -->
+              <img src="https://github.com/luisfelipe-fernandesesteves.png"alt="Luis Felipe Fernandes Esteves"class="membro-avatar"/>
+            </div>
+            <!-- Informações do integrante -->
+            <div class="membro-info">
+              <h3 class="membro-nome">Luis Felipe F. Esteves</h3>
+              <span class="membro-rm">RM 569064</span>
+            </div>
+            <div class="membro-social">
+                <!-- GitHub -->
+              <a class="btn-social"href="https://github.com/luisfelipe-fernandesesteves"target="_blank"rel="noopener noreferrer"aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+               <!-- LinkedIn -->
+              <a class="btn-social"href="https://www.linkedin.com/in/luis-felipe-f-b2a3983b3/"target="_blank"rel="noopener noreferrer"aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+              <!-- Integrante Pedro Lima -->
+          <div class="membro-card">
+            <div class="membro-efeito"></div>
+            <div class="membro-avatar-wrapper">
+                <!-- Foto do integrante --> 
+              <img src="https://github.com/pedrolimeisdev.png"alt="Pedro Lima"class="membro-avatar"/>
+            </div>
+            <!-- Informações do integrante -->
+            <div class="membro-info">
+              <h3 class="membro-nome">Pedro Lima</h3>
+              <span class="membro-rm">RM 569178</span>
+            </div>
+            <div class="membro-social">
+                 <!-- GitHub -->
+              <a class="btn-social"href="https://github.com/pedrolimeisdev"target="_blank"rel="noopener noreferrer"aria-label="GitHub"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+               <!-- LinkedIn -->
+              <a class="btn-social"href="https://www.linkedin.com/in/pedrolimeis/"target="_blank"rel="noopener noreferrer"aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    
+      <!-- =========================
+         RODAPÉ
+    ========================== -->
+    <footer class="footer">
+      <p class="text-footer">
+        © 2026 SENTRA. Todos os direitos reservados. Projeto FIAP Global
+        Solution.
+      </p>
+    </footer>
+  </body>
 </html>

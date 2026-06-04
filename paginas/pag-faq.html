@@ -1,33 +1,240 @@
 <!doctype html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ / Sentra</title>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- LINK CSS -->
     <link rel="stylesheet" href="../css/pag-faq.css" />
-</head>
 
-<body>
+    <!-- LINK JS -->
+    <script src="../js/pag-faq.js" defer></script>
+  </head>
+
+  <body>
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
     <header class="navbar">
-        <div class="logo">
-            <img src="../assets/logotipo-sentra.webp" alt="Logotipo Sentra" class="logo">
-        </div>
+      <div class="logo-container">
+        <img src="../assets/logotipo-sentra.webp"alt="Logotipo Sentra"class="logo"/>
+      </div>
 
-        <nav>
-            <a href="../index.html" class="nav-link">Página Inicial</a>
-            <a href="./pag-sobre.html" class="nav-link">Sobre</a>
-            <a href="./pag-faq.html" class="nav-link text-highlight">FAQ</a>
-            <a href="./pag-contato.html" class="nav-link">Contato</a>
-            <a href="./pag-solucao.html" class="nav-link">Solução</a>
-            <a href="./pag-equipe.html" class="nav-link">Equipe</a>
-        </nav>
+      <nav aria-label="Navegação principal">
+        <a href="../index.html" class="nav-link">Página Inicial</a>
+        <a href="./pag-sobre.html" class="nav-link">Sobre</a>
+        <a href="./pag-faq.html" class="nav-link text-highlight">FAQ</a>
+        <a href="./pag-contato.html" class="nav-link">Contato</a>
+        <a href="./pag-solucao.html" class="nav-link">Solução</a>
+        <a href="./pag-equipe.html" class="nav-link">Equipe</a>
+      </nav>
 
-        <a href="./pag-demonstracao.html" class="btn-nav">Demonstração</a>
+      <a href="./pag-demonstracao.html" class="btn-nav"> Demonstração </a>
     </header>
-    <main>
-    </main>
-</body>
 
+    <main>
+      <!-- ==========================================
+             HERO FAQ
+        =========================================== -->
+      <section class="faq-hero">
+        <div class="hero-efeito"></div>
+
+        <div class="hero-content">
+          <span class="hero-subtitulo"> SUPORTE E DÚVIDAS </span>
+
+          <h1 class="faq-titulo">
+            Como podemos
+            <span class="text-sentra">ajudar?</span>
+          </h1>
+
+          <p class="faq-descricao">
+            Encontre respostas rápidas para as principais perguntas sobre
+            tecnologia orbital, monitoramento de queimadas e relatórios
+            automatizados do SENTRA.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             FAQ
+        =========================================== -->
+      <section class="faq-questionario">
+        <div class="faq-container">
+          <!-- ITEM 1 -->
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-titulo">
+                <i class="fa-solid fa-satellite-dish faq-item-icon"></i>
+
+                <span class="faq-pergunta-text"> O que é o SENTRA? </span>
+              </span>
+
+              <i class="fa-solid fa-chevron-down faq-icones"></i>
+            </button>
+
+            <div class="faq-resposta">
+              <p class="faq-resposta-text">
+                O SENTRA (Sistema de Relatórios de Incêndios Automatizados) é
+                uma plataforma conceitual desenvolvida para monitoramento
+                inteligente da Floresta Amazônica utilizando dados orbitais e
+                Inteligência Artificial.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 2 -->
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-titulo">
+                <i class="fa-solid fa-satellite faq-item-icon"></i>
+
+                <span class="faq-pergunta-text">
+                  Como funciona o monitoramento orbital?
+                </span>
+              </span>
+
+              <i class="fa-solid fa-chevron-down faq-icones"></i>
+            </button>
+
+            <div class="faq-resposta">
+              <p class="faq-resposta-text">
+                Sensores embarcados em satélites observam continuamente a
+                superfície terrestre, detectando anomalias térmicas associadas a
+                focos de calor e queimadas.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-titulo">
+                <i class="fa-solid fa-clock faq-item-icon"></i>
+
+                <span class="faq-pergunta-text">
+                  Qual a frequência de atualização dos relatórios?
+                </span>
+              </span>
+
+              <i class="fa-solid fa-chevron-down faq-icones"></i>
+            </button>
+
+            <div class="faq-resposta">
+              <p class="faq-resposta-text">
+                Os relatórios são atualizados automaticamente a cada 3 horas
+                para garantir informações recentes e confiáveis.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 4 -->
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-titulo">
+                <i class="fa-solid fa-users faq-item-icon"></i>
+
+                <span class="faq-pergunta-text">
+                  Quem pode utilizar o SENTRA?
+                </span>
+              </span>
+
+              <i class="fa-solid fa-chevron-down faq-icones"></i>
+            </button>
+
+            <div class="faq-resposta">
+              <p class="faq-resposta-text">
+                Governos, órgãos ambientais, empresas, pesquisadores, ONGs e
+                comunidades locais podem utilizar os relatórios gerados pela
+                plataforma.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 5 -->
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-titulo">
+                <i class="fa-solid fa-graduation-cap faq-item-icon"></i>
+
+                <span class="faq-pergunta-text">
+                  O SENTRA é um projeto comercial ou acadêmico?
+                </span>
+              </span>
+
+              <i class="fa-solid fa-chevron-down faq-icones"></i>
+            </button>
+
+            <div class="faq-resposta">
+              <p class="faq-resposta-text">
+                O SENTRA é um projeto acadêmico desenvolvido para a Global
+                Solution da FIAP com foco em tecnologia espacial aplicada ao
+                meio ambiente.
+              </p>
+            </div>
+          </div>
+
+          <!-- ITEM 6 -->
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">
+              <span class="faq-pergunta-titulo">
+                <i class="fa-solid fa-chart-line faq-item-icon"></i>
+
+                <span class="faq-pergunta-text">
+                  De onde vêm os dados exibidos?
+                </span>
+              </span>
+
+              <i class="fa-solid fa-chevron-down faq-icones"></i>
+            </button>
+
+            <div class="faq-resposta">
+              <p class="faq-resposta-text">
+                Os dados são provenientes de bases públicas, incluindo
+                informações disponibilizadas pelo INPE e outros sistemas de
+                monitoramento ambiental.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================
+             SUPORTE
+        =========================================== -->
+      <section class="faq-suporte">
+        <div class="faq-suporte-card">
+          <div class="suporte-icon">
+            <i class="fa-solid fa-envelope-open-text"></i>
+          </div>
+
+          <div class="suporte-content">
+            <h2 class="text-h2">Ainda tem alguma dúvida?</h2>
+
+            <p class="text-p">
+              Entre em contato com nossa equipe para obter mais informações
+              sobre o projeto SENTRA.
+            </p>
+          </div>
+
+          <a href="./pag-contato.html" class="btn-suporte">
+            Entre em Contato
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+    <footer class="footer">
+      <p class="text-footer">
+        © 2026 SENTRA. Todos os direitos reservados. Projeto FIAP Global
+        Solution.
+      </p>
+    </footer>
+  </body>
 </html>

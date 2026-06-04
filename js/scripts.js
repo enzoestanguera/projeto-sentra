@@ -1,8 +1,3 @@
-// ==========================================================================
-// INICIALIZAÇÃO DA PÁGINA
-// Aguarda todo o HTML ser carregado antes de executar o script
-// ==========================================================================
-
 document.addEventListener("DOMContentLoaded", () => {
   // ==========================================================================
   // SELEÇÃO DOS ELEMENTOS DO DOM
@@ -31,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ==========================================================================
   // CAPTURA A POSIÇÃO DO CURSOR OU TOQUE NA TELA
-  // Calcula deslocamento e velocidade do movimento
   // ==========================================================================
 
   function handleMove(clientX, clientY) {
@@ -151,7 +145,6 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(renderParallax);
   }
 
-  // Inicia a animação contínua
   renderParallax();
 
   // ==========================================================================

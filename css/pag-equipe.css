@@ -1,9 +1,406 @@
 @import url('navbar.css');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght=200..800&family=Inter:wght=300;400;600;700&display=swap');
+
+/* ==========================================================================
+   CONFIGURAÇÕES GLOBAIS E FUNDO
+   ========================================================================== */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     background: var(--cor-bg);
     color: var(--cor-branco);
     font-size: 16px;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: -40px;
+    background: url("../assets/bg-espaco.webp") center center / cover no-repeat;
+    z-index: -1;
+    opacity: 0.45;
+}
+
+main {
+    padding-top: 100px;
+}
+
+/* ==========================================================================
+   SEÇÃO HERO DA EQUIPE
+   ========================================================================== */
+
+.equipe-hero {
+    position: relative;
+    padding: 120px 40px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 45vh;
     overflow: hidden;
+}
+
+.equipe-hero .hero-efeito {
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 106, 0, 0.15) 0%, transparent 70%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: blur(50px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero-subtitulo {
+    display: inline-block;
+    color: var(--laranja-primario);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.equipe-titulo {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 64px;
+    line-height: 1.15;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cor-branco);
+    margin-bottom: 24px;
+    text-shadow: 0 0 30px rgba(255, 106, 0, 0.25);
+}
+
+.text-sentra {
+    color: var(--laranja-primario);
+}
+
+.equipe-descricao {
+    font-size: 18px;
+    color: var(--cor-cinza);
+    line-height: 1.6;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SEÇÃO MEMBROS (GRADE E CARDS GLASSMORPHISM)
+   ========================================================================== */
+
+.equipe-membros {
+    padding: 20px 40px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.membros-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Individual */
+.membro-card {
+    position: relative;
+    padding: 50px 30px 40px;
+    border-radius: 24px;
+    background: rgba(17, 17, 22, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 106, 0, 0.08);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    opacity: 0;
+    animation: fadeUpCard 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Efeito card Interativo */
+.membro-efeito {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 106, 0, 0.12) 0%, transparent 60%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.membro-card:hover .membro-efeito {
+    opacity: 1;
+}
+
+/* Efeitos Hover no Card */
+.membro-card:hover {
+    border-color: rgba(255, 106, 0, 0.3);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55),0 0 30px rgba(255, 106, 0, 0.15);
+    background: rgba(24, 24, 30, 0.6);
+}
+
+.membro-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--laranja-primario), transparent);
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    z-index: 3;
+}
+
+.membro-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* Avatar / Imagem de perfil dos Integrantes */
+.membro-avatar-wrapper {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    padding: 5px;
+    background: rgba(255, 106, 0, 0.08);
+    border: 1px solid rgba(255, 106, 0, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    z-index: 2;
+    transform: translateZ(30px); 
+}
+
+.membro-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.4s ease;
+}
+
+.membro-card:hover .membro-avatar-wrapper {
+    transform: translateZ(45px) scale(1.05);
+    border-color: var(--laranja-primario);
+    box-shadow: 0 10px 25px rgba(255, 106, 0, 0.25);
+}
+
+/* Informações dos Membros */
+.membro-info {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 25px;
+    flex-grow: 1;
+    transform: translateZ(20px);
+}
+
+.membro-nome {
+    font-family: 'Oxanium', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--cor-branco);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.membro-card:hover .membro-nome {
+    color: var(--laranja-primario);
+}
+
+.membro-cargo {
+    font-size: 13px;
+    color: var(--cor-cinza);
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.membro-rm {
+    display: inline-block;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--laranja-primario);
+    background: rgba(255, 106, 0, 0.06);
+    border: 1px solid rgba(255, 106, 0, 0.25);
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.membro-card:hover .membro-rm {
+    background: rgba(255, 106, 0, 0.12);
+    border-color: var(--laranja-primario);
+}
+
+/* Links Sociais */
+.membro-social {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    transform: translateZ(15px);
+}
+
+.membro-social .btn-social {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.35s ease;
+}
+
+.membro-social .btn-social:hover {
+    color: var(--cor-branco);
+    background: rgba(255, 106, 0, 0.2);
+    border-color: var(--laranja-primario);
+    box-shadow: 0 0 15px rgba(255, 106, 0, 0.4);
+    transform: translateY(-4px) scale(1.08);
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER)
+   ========================================================================== */
+
+.footer {
+    width: 100%;
+    padding: 24px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--laranja-primario);
+    position: relative;
+    z-index: 20;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+.text-footer {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--cor-branco);
+    text-align: center;
+}
+
+/* ==========================================================================
+   ANIMAÇÕES DE ENTRADA
+   ========================================================================== */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUpCard {
+    from {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/*Desktop*/
+@media (max-width: 1200px) {
+    .membros-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .equipe-titulo {
+        font-size: 50px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+    main {
+        padding-top: 80px;
+    }
+    .equipe-hero {
+        padding: 100px 20px 40px;
+        min-height: auto;
+    }
+    .equipe-titulo {
+        font-size: 42px;
+    }
+    .equipe-membros {
+        padding: 10px 24px 60px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .membros-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 380px;
+        margin: 20px auto 0;
+    }
+    .equipe-titulo {
+        font-size: 32px;
+    }
+    .equipe-description {
+        font-size: 15px;
+    }
+    .membro-card {
+        padding: 40px 24px 30px;
+    }
+    .membro-avatar-wrapper {
+        width: 115px;
+        height: 115px;
+        margin-bottom: 20px;
+    }
+    .text-footer {
+        font-size: 14px;
+    }
 }
