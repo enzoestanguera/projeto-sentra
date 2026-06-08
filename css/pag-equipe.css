@@ -262,6 +262,25 @@ main {
     border-color: var(--laranja-primario);
 }
 
+.membro-turma{
+     display: inline-block;
+    font-family: 'Oxanium', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--laranja-primario);
+    background: rgba(255, 106, 0, 0.06);
+    border: 1px solid rgba(255, 106, 0, 0.25);
+    padding: 4px 12px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.membro-card:hover .membro-turma {
+    background: rgba(255, 106, 0, 0.12);
+    border-color: var(--laranja-primario);
+}
+
 /* Links Sociais */
 .membro-social {
     position: relative;
