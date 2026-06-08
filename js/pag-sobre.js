@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const reduceMotion = window.matchMedia(
-  "(prefers-reduced-motion: reduce)"
+    "(prefers-reduced-motion: reduce)",
   ).matches;
 
   if (reduceMotion) return;
-  
+
   document.addEventListener("mousemove", (e) => {
     handleMove(e.clientX, e.clientY);
   });

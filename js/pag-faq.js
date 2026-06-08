@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
         handleMove(e.touches[0].clientX, e.touches[0].clientY);
       }
     },
-    { passive: true }
+    { passive: true },
   );
 
   function renderParallax() {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
         answer.style.paddingBottom = null;
       } else {
         item.classList.add("ativo");
-        
+
         // Ajusta dinamicamente o espaçamento da resposta aberta
         answer.style.paddingTop = "10px";
         answer.style.paddingBottom = "20px";

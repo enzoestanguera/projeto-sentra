@@ -159,7 +159,7 @@ main {
 /* Efeitos Hover no Card */
 .membro-card:hover {
     border-color: rgba(255, 106, 0, 0.3);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55),0 0 30px rgba(255, 106, 0, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55), 0 0 30px rgba(255, 106, 0, 0.15);
     background: rgba(24, 24, 30, 0.6);
 }
 
@@ -193,7 +193,7 @@ main {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
     z-index: 2;
-    transform: translateZ(30px); 
+    transform: translateZ(30px);
 }
 
 .membro-avatar {
@@ -329,6 +329,7 @@ main {
         opacity: 0;
         transform: translateY(40px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -340,6 +341,7 @@ main {
         opacity: 0;
         transform: translateY(60px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -356,6 +358,7 @@ main {
         grid-template-columns: repeat(2, 1fr);
         gap: 25px;
     }
+
     .equipe-titulo {
         font-size: 50px;
     }
@@ -366,13 +369,16 @@ main {
     main {
         padding-top: 80px;
     }
+
     .equipe-hero {
         padding: 100px 20px 40px;
         min-height: auto;
     }
+
     .equipe-titulo {
         font-size: 42px;
     }
+
     .equipe-membros {
         padding: 10px 24px 60px;
     }
@@ -386,20 +392,25 @@ main {
         max-width: 380px;
         margin: 20px auto 0;
     }
+
     .equipe-titulo {
         font-size: 32px;
     }
+
     .equipe-description {
         font-size: 15px;
     }
+
     .membro-card {
         padding: 40px 24px 30px;
     }
+
     .membro-avatar-wrapper {
         width: 115px;
         height: 115px;
         margin-bottom: 20px;
     }
+
     .text-footer {
         font-size: 14px;
     }
