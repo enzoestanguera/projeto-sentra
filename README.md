@@ -91,11 +91,6 @@ Além das linguagens e tecnologias utilizadas no desenvolvimento, o projeto tamb
 
 <br>
 
-* **Font Awesome:** utilizado para os ícones presentes nas páginas, cards, botões e elementos visuais do projeto.
-* **Git:** utilizado para controle de versão.
-* **GitHub:** utilizado para hospedagem do repositório e colaboração entre os integrantes.
-* **VS Code:** utilizado como ambiente principal de desenvolvimento.
-
 ---
 
 # 📁 Estrutura de Pastas
@@ -176,6 +171,10 @@ O repositório oficial do projeto está disponível no GitHub:
 
 https://github.com/NextGen-Lulpa/projeto-sentra
 
+Deploy via Vercel:
+
+https://projeto-sentra.vercel.app/index.html
+
 ---
 
 # 👥 Equipe
@@ -196,6 +195,7 @@ O **Sentra** foi idealizado com foco em tecnologia, impacto ambiental, prevenç�
 </a>
 
 ### Ana
+RM560871 - 1TDSPF
 
 <a href="https://github.com/anapmagalhaess">
 <img src="https://img.shields.io/badge/@anapmagalhaess-ff6b00?style=for-the-badge&logo=github&logoColor=white"/>
@@ -215,6 +215,7 @@ O **Sentra** foi idealizado com foco em tecnologia, impacto ambiental, prevenç�
 </a>
 
 ### Enzo
+RM568937 - 1TDSPF
 
 <a href="https://github.com/enzoestanguera">
 <img src="https://img.shields.io/badge/@enzoestanguera-ff6b00?style=for-the-badge&logo=github&logoColor=white"/>
@@ -234,6 +235,7 @@ O **Sentra** foi idealizado com foco em tecnologia, impacto ambiental, prevenç�
 </a>
 
 ### Larissa
+RM 572983 - 1TDSPF
 
 <a href="https://github.com/lkoprowskif">
 <img src="https://img.shields.io/badge/@lkoprowskif-ff6b00?style=for-the-badge&logo=github&logoColor=white"/>
@@ -253,6 +255,7 @@ O **Sentra** foi idealizado com foco em tecnologia, impacto ambiental, prevenç�
 </a>
 
 ### Luis
+RM569064 - 1TDSPF
 
 <a href="https://github.com/luisfelipe-fernandesesteves">
 <img src="https://img.shields.io/badge/@luisfelipe--fernandesesteves-ff6b00?style=for-the-badge&logo=github&logoColor=white"/>
@@ -272,6 +275,7 @@ O **Sentra** foi idealizado com foco em tecnologia, impacto ambiental, prevenç�
 </a>
 
 ### Pedro
+RM569178 - 1TDSPF
 
 <a href="https://github.com/pedrolimeis">
 <img src="https://img.shields.io/badge/@pedrolimeis-ff6b00?style=for-the-badge&logo=github&logoColor=white"/>
