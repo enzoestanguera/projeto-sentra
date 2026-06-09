@@ -90,23 +90,22 @@ Além das linguagens e tecnologias utilizadas no desenvolvimento, o projeto tamb
 </div>
 
 <br>
-
 ---
 
 # 📁 Estrutura de Pastas
+</div>
 
 ```text
 📁 projeto-sentra
-┃ ┣ 📂 assets
-┃ ┣ 📂 css
-┃ ┣ 📂 js
-┃ ┣ 📂 paginas
+┣ 📂 assets
+┣ 📂 css
+┣ 📂 js
 ┣ 📂 paginas
 ┣ 📄 index.html
 ┗ 📄 README.md
 ```
-
 ---
+<div align="center">
 
 # 🖼️ Imagens Relacionados ao Projeto
 
@@ -303,7 +302,7 @@ Para dúvidas, sugestões, melhorias ou relato de problemas, utilize a aba de **
 https://github.com/NextGen-Lulpa/projeto-sentra/issues
 
 ---
-
+</div>
 
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:ff6b00,100:b22222&height=160&section=footer"/>
