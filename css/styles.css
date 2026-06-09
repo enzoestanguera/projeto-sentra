@@ -155,6 +155,7 @@
         font-weight: 500;
         cursor: pointer;
         transition: 0.35s ease;
+        text-decoration: none;
     }
 
     .btn-primary {
