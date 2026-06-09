@@ -321,6 +321,22 @@ body {
     line-height: 1.5;
 }
 
+/*MODAL DE ERRO*/
+.contact-modal.success .contact-modal-icon {
+    color: var(--laranja-primario);
+    text-shadow: 0 0 20px rgba(255, 94, 0, 0.4);
+}
+
+.contact-modal.error .contact-modal-icon {
+    color: #E84545;
+    text-shadow: 0 0 20px rgba(232, 69, 69, 0.4);
+}
+
+.contact-modal.error .contact-modal-content {
+    border: 1px solid rgba(232, 69, 69, 0.35);
+    box-shadow: 0 0 30px rgba(232, 69, 69, 0.15);
+}
+
 /*animacao do modal*/
 @keyframes modalUp {
     from {
