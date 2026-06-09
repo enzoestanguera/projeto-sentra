@@ -27,10 +27,25 @@ body {
     margin: 180px auto;
     color: var(--color-text);
     align-items: center;
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/*Animacao*/
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* esquerda - info*/
 .demo-info {
+    transition: 0.5s ease;
     flex: 0 0 350px;
     padding: 2rem 1rem;
     display: flex;
@@ -92,7 +107,6 @@ body {
     border-radius: 15px;
     border: 1px solid var(--color-border);
     display: flex;
-    overflow: visible;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -215,7 +229,6 @@ body {
     border-radius: 12px;
     border: 1px solid var(--color-border);
     position: relative;
-    overflow: hidden;
     min-height: 470px;
     height: 500px;
 }
@@ -243,6 +256,7 @@ body {
     flex-direction: column;
     gap: 1.5rem;
 }
+
 
 .dash-card {
     background-color: var(--color-card);
@@ -326,14 +340,14 @@ body {
     gap: 5px;
 }
 
-.card-body h2 {
+.card-title {
     font-size: 1.3rem;
     margin: 0;
     line-height: 1.2;
     word-break: break-word;
 }
 
-.card-body p {
+.subtitle {
     margin: 0;
     line-height: 1.4;
 }
@@ -347,4 +361,66 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+}
+
+/* raio */
+.map-radius {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0, 229, 255, 0.2);
+    border: 1px dashed #00E5FF;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.1s;
+}
+
+/* tooltip */
+.map-tooltip {
+    position: absolute;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    padding: 1rem;
+    border-radius: 12px;
+    color: var(--color-text);
+    pointer-events: none;
+    z-index: 10000; /* camada*/
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    font-size: 0.8rem;
+    min-width: 220px;
+    backdrop-filter: blur(8px);
+}
+
+#tooltip-biome-container {
+    margin: 0 0 12px 0;
+    color: var(--color-highlight);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 8px;
+}
+
+.tooltip-subtitle {
+    margin: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tooltip-highlight {
+    color: var(--color-subtitle);
+    font-weight: 500;
+}
+/* divisor */
+.map-tooltip .divider {
+    height: 1px;
+    background-color: var(--color-border);
+    margin: 10px 0;
+    opacity: 0.5;
 }
