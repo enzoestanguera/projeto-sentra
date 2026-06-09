@@ -120,4 +120,51 @@ document.addEventListener("DOMContentLoaded", () => {
         radiusCircle.style.display = 'none';
     });
 
+    //  HISTORICO
+const dashboardLinks = document.querySelectorAll('.dashboard-link[data-panel]');
+const dashboardPanel = document.getElementById('dashboardPanel');
+const historyPanel = document.getElementById('historyPanel');
+
+//  ao clicar em cada link
+dashboardLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const selectedPanel = link.dataset.panel;
+
+        dashboardLinks.forEach((item) => {
+            item.classList.remove('active');
+        });
+
+        link.classList.add('active');
+
+        dashboardPanel.classList.remove('active-panel');
+        historyPanel.classList.remove('active-panel');
+
+        if (selectedPanel === 'dashboard') {
+            dashboardPanel.classList.add('active-panel');
+        }
+
+        if (selectedPanel === 'history') {
+            historyPanel.classList.add('active-panel');
+        }
+    });
+});
+
+const biomeFilter = document.getElementById('biomeFilter');
+const historyItems = document.querySelectorAll('.history-log-item');
+
+biomeFilter.addEventListener('change', () => {
+    const selectedBiome = biomeFilter.value;
+
+    historyItems.forEach((item) => {
+        const itemBiome = item.dataset.biome;
+
+        if (selectedBiome === 'ambos' || selectedBiome === itemBiome) {
+            item.classList.remove('hidden');
+        } else {
+            item.classList.add('hidden');
+        }
+    });
+});
 });
