@@ -14,8 +14,6 @@
 
 <h2 align="center">💻 Linguagens Utilizadas </h2>
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=java" height="54" alt="java logo"  />
-  <img width="11" />
   <img src="https://skillicons.dev/icons?i=js" height="54" alt="javascript logo"  />
   <img width="11" />
   <img src="https://skillicons.dev/icons?i=html" height="54" alt="html5 logo"  />
@@ -24,10 +22,6 @@
   <img width="11" />
   <img src="https://skillicons.dev/icons?i=git" height="54" alt="git logo"  />
   <img width="11" />
-  <img src="https://skillicons.dev/icons?i=py" height="54" alt="python logo"  />
-  <img width="11" />
-  <img src="https://skillicons.dev/icons?i=mysql" height="54" alt="mysql logo"  />
-  <img width="12" />
 </div>
 
 ###  🔥 Combate inteligente ao fogo na Amazônia
@@ -63,17 +57,6 @@ A proposta utiliza tecnologia, análise de dados e monitoramento inteligente par
 | ⚡   | Resposta rápida            |
 
 </div>
-
----
-
-# 💻 Tecnologias
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=python,java,js,html,css,mysql,sqlite,git,github,vscode"/>
-
-</div>
-
 ---
 
 # 🛠️ Ferramentas e Bibliotecas
@@ -193,7 +176,7 @@ O **Sentra** foi idealizado com foco em tecnologia, impacto ambiental, prevenç�
 <img src="https://github.com/anapmagalhaess.png" width="110px;" style="border-radius:50%;" alt="Ana"/>
 </a>
 
-### Ana
+### Ana Clara Pereira de Magalhães
 RM560871 - 1TDSPF
 
 <a href="https://github.com/anapmagalhaess">
@@ -213,7 +196,7 @@ RM560871 - 1TDSPF
 <img src="https://github.com/enzoestanguera.png" width="110px;" style="border-radius:50%;" alt="Enzo"/>
 </a>
 
-### Enzo
+### Enzo Torres Estanguera
 RM568937 - 1TDSPF
 
 <a href="https://github.com/enzoestanguera">
@@ -233,7 +216,7 @@ RM568937 - 1TDSPF
 <img src="https://github.com/lkoprowskif.png" width="110px;" style="border-radius:50%;" alt="Larissa"/>
 </a>
 
-### Larissa
+### Larissa Koprowski Ferreira
 RM 572983 - 1TDSPF
 
 <a href="https://github.com/lkoprowskif">
@@ -253,7 +236,7 @@ RM 572983 - 1TDSPF
 <img src="https://github.com/luisfelipe-fernandesesteves.png" width="110px;" style="border-radius:50%;" alt="Luis"/>
 </a>
 
-### Luis
+### Luis Felipe Fernandes Esteves
 RM569064 - 1TDSPF
 
 <a href="https://github.com/luisfelipe-fernandesesteves">
@@ -273,7 +256,7 @@ RM569064 - 1TDSPF
 <img src="https://github.com/pedrolimeisdev.png" width="110px;" style="border-radius:50%;" alt="Pedro"/>
 </a>
 
-### Pedro
+### Pedro Henrique De Lima Reis
 RM569178 - 1TDSPF
 
 <a href="https://github.com/pedrolimeis">
